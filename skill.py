@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request, json
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///skill.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://tffcwenromrbep:09c6f2beabd16e99233a431f974f58915e046486a7d96fa4cfd79fc0fbd5dc5a@ec2-44-197-94-126.compute-1.amazonaws.com:5432/d4i37hcmhbe50t"
 db = SQLAlchemy(app)
 
 
