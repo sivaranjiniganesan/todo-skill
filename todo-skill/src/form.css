@@ -1,0 +1,38 @@
+/* .createForm {
+    margin-top: -16%;
+    margin-left: -9%;
+  } */
+
+.createForm div{
+    
+    padding: 4px;
+
+}
+  
+.css-2b097c-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 318px;
+    height: 62px;
+}
+
+   .react-datepicker-wrapper input, .task input{
+        width: 285px;
+        height: 43px;
+        /* text-align: inherit; */
+        font-size: 115%;
+        padding-left: 1%;
+        margin-left: 3px;
+    }
+
+    .react-datepicker-wrapper input{
+        margin-left: -2px;
+        padding-right: 10px;
+    }
+   
+.submit{
+    width: 11%;
+    height: 29px;
+    margin-top: 49px;
+    margin-left: 82px;
+}

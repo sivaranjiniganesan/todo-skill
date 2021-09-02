@@ -1,0 +1,54 @@
+.MuiTableContainer-root {
+    width: 100%;
+    padding-left: 13px;
+    overflow-x: auto;
+    margin-left: -218px;
+    /* margin-bottom: 8px; */
+    padding-top: 13px;
+    background: #8bc34a45 !important;
+}
+
+.MuiTable-root {
+   
+    width: 101% !important;
+    display: table;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-left: -12px;
+    margin-top: -13px;
+ 
+}
+
+.MuiTableCell-root {
+    text-align: center !important;
+}
+
+.MuiTableCell-alignRight {
+    text-align: center !important;
+}
+
+.MuiTableCell-alignLeft {
+    text-align: center !important;
+}
+
+.MuiTableCell-head {
+    font-weight: 800 !important;
+    font-size: 16px !important;
+}
+
+.MuiTableHead-root {
+    background: #8080803d;
+
+}
+
+.save,.delete{
+    width: 11%;
+    height: 29px;
+    margin-top: 49px;
+    margin-left: 82px;
+}
+
+.css-1pahdxg-control {
+    box-shadow : white !important
+    }
+    

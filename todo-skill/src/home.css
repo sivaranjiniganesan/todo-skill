@@ -1,0 +1,59 @@
+.spl{
+    height: 184px;
+    width: 50%;
+    margin-left: -74px;
+    background-color: #8bc34a2e;
+    border-radius: 10px;
+}
+
+.skills,.show{
+    height: 118px;
+    width: 26%;
+    padding-top: 1px;
+    margin-top: 2px;
+    padding-left: 116px;
+    padding-right: -28px;
+    margin-left: -1px;
+    background-color: #a9aea454;
+    border-radius: 10px;
+}
+
+.CircularProgressbar { 
+    width: 23% !important;
+    vertical-align: baseline;
+    margin-left: 399px;
+    margin-top: -126px;
+}
+
+.spl h3{
+    margin-left: 19px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    padding-top: 23px;
+}
+
+.skills h3{
+    margin-left: 19px;
+    margin-top: -17px;
+    margin-bottom: 20px;
+    padding-top: 23px;
+}
+
+.label{
+    display: flex;
+    flex-direction: column;
+    margin-left: 19px;
+}
+
+.label label{
+    padding: 3px;
+}
+
+.hide{
+    display: none;
+
+}
+
+.show{
+    display:contents;
+}
