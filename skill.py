@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, request, json
 from flask_sqlalchemy import SQLAlchemy
+from flask.helpers import send_from_directory
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='', static_folder='frontend/build')
+
 app.config["SQLALCHEMY_DATABASE_URI"] = "postgres://tffcwenromrbep:09c6f2beabd16e99233a431f974f58915e046486a7d96fa4cfd79fc0fbd5dc5a@ec2-44-197-94-126.compute-1.amazonaws.com:5432/d4i37hcmhbe50t"
 db = SQLAlchemy(app)
 
@@ -20,6 +22,10 @@ def todo_serializer(todo):
 
 def todo_task(todo):
     return todo.status
+
+@app.route("/")
+def serve():
+    return send_from_directory(app.static_folder,'index.html')
 
 
 @app.route('/home')
