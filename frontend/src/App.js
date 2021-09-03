@@ -13,16 +13,16 @@
 // function App() {
 //   return (
 //     <div className="App">
-//        <Router>  <Switch><Nav></Nav></Switch></Router>
+//        {/* <Router>  <Switch><Nav></Nav></Switch></Router> */}
      
 //      <Router>
 //         <Switch>
-//           <Route path="/home">
+//           {/* <Route path="/home">
 //             <Home></Home>
 //           </Route>
 //           <Route path="/project_portfolio">
 //           <ProjOverview></ProjOverview>
-//           </Route>
+//           </Route> */}
 //           <Route path="/create">
 //      <Create></Create>
 //           </Route>
