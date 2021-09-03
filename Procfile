@@ -1,1 +1,1 @@
-web: gunicorn skill:app
+web: gunicorn app:app
