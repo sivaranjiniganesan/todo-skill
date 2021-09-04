@@ -44,7 +44,7 @@ function App() {
   const [getMessage, setGetMessage] = useState({})
 
   useEffect(()=>{
-    axios.get('https://todo-skill.herokuapp.com/flask/hello').then(response => {
+    axios.get('https://todo-skill.herokuapp.com/api').then(response => {
       console.log("SUCCESS", response)
       setGetMessage(response)
     }).catch(error => {
