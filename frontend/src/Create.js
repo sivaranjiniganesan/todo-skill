@@ -9,7 +9,7 @@ function Create() {
   
     useEffect(()=> {
 
-        fetch('/api').then(response => {
+        fetch('https://todo-skill.herokuapp.com/api').then(response => {
           if(response.ok){
             return response.json()
           }
@@ -30,7 +30,7 @@ function Create() {
             'start' : inputstart,
             'end' : inputend
         })
-          fetch('/create', {
+          fetch('https://todo-skill.herokuapp.com/create', {
               method: 'POST',
               body: JSON.stringify({
                   skill: inputskill,
@@ -62,7 +62,7 @@ function Create() {
       }
 
       const getLatestTodos = () => {
-          fetch('/api').then(response => {
+          fetch('https://todo-skill.herokuapp.com/api').then(response => {
               if(response.ok){
                   return response.json()
               }

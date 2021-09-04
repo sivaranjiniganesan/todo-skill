@@ -2,7 +2,9 @@ import './App.css';
 import Nav from "./Nav"
 import Create from "./Create"
 import Home from "./Home"
+import axios from 'axios'
 import ProjOverview from "./ProjOverview"
+import React, { useEffect, useState } from 'react';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +12,18 @@ import {
   Link
 } from "react-router-dom";
 
+ 
 function App() {
+  useEffect(()=>{
+    axios.get('https://todo-skill.herokuapp.com/api').then(response => {
+      console.log("SUCCESS", response)
+      console.log(response)
+    }).catch(error => {
+      console.log(error)
+    })
+
+  }, [])
+
   return (
     <div className="App">
        {/* <Router>  <Switch><Nav></Nav></Switch></Router> */}
