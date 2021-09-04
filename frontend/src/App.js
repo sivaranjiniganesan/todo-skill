@@ -7,7 +7,7 @@ import axios from 'axios'
 import ProjOverview from "./ProjOverview"
 import React, { useEffect, useState } from 'react';
 import {
-  HashRouter as Router,
+  BrowserRouter as Router,
   Switch,
   Route,
   Link
@@ -38,7 +38,7 @@ function App() {
           <Route path="/project_portfolio">
           <ProjOverview></ProjOverview>
           </Route>
-          <Route path="https://todo-skill.herokuapp.com/create">
+          <Route path="/create">
      <Create></Create>
           </Route>
         </Switch>
