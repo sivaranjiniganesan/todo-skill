@@ -28,8 +28,8 @@ def todo_serializer(todo):
 def todo_task(todo):
     return todo.status
 
-@app.route("/")
-def serve():
+@app.route("/", defaults={'path':''})
+def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
 
