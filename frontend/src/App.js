@@ -26,16 +26,17 @@ function App() {
 
   return (
     <div className="App">
+       <Create></Create>
        <Router>  <Switch><Nav></Nav></Switch></Router>
-     
+       <Router>  <Switch> <Create></Create></Switch></Router>
      <Router>
         <Switch>
-          {/* <Route path="/home">
+          <Route path="/home">
             <Home></Home>
           </Route>
           <Route path="/project_portfolio">
           <ProjOverview></ProjOverview>
-          </Route> */}
+          </Route>
           <Route path="https://todo-skill.herokuapp.com/create">
      <Create></Create>
           </Route>
