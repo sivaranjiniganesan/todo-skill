@@ -26,7 +26,7 @@ function App() {
 
   return (
     <div className="App">
-       {/* <Router>  <Switch><Nav></Nav></Switch></Router> */}
+       <Router>  <Switch><Nav></Nav></Switch></Router>
      
      <Router>
         <Switch>
@@ -36,7 +36,7 @@ function App() {
           <Route path="/project_portfolio">
           <ProjOverview></ProjOverview>
           </Route> */}
-          <Route path="/create">
+          <Route path="https://todo-skill.herokuapp.com/create">
      <Create></Create>
           </Route>
         </Switch>
