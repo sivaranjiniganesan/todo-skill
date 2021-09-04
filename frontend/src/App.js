@@ -3,10 +3,11 @@ import Nav from "./Nav"
 import Create from "./Create"
 import Home from "./Home"
 import axios from 'axios'
+// import { HashRouter, Route } from 'react-router-dom';
 import ProjOverview from "./ProjOverview"
 import React, { useEffect, useState } from 'react';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Link
