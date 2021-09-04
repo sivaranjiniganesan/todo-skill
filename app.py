@@ -5,9 +5,6 @@ from flask.helpers import send_from_directory
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
 
 
-@app.route("/", defaults={'path':''})
-def serve(path):
-    return send_from_directory(app.static_folder,'index.html')
 
 # api.add_resource(HelloApiHandler, '/flask/hello')
 
