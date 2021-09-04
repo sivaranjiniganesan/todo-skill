@@ -1,10 +1,10 @@
-from flask import Flask, jsonify, request, json
+from flask import Flask, jsonify, render_template,request, json
 from flask_sqlalchemy import SQLAlchemy
 from flask.helpers import send_from_directory
-from flask_cors import CORS, cross_origin
+
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
-CORS(app)
+
 
 # api.add_resource(HelloApiHandler, '/flask/hello')
 
@@ -27,14 +27,14 @@ def todo_serializer(todo):
 
 def todo_task(todo):
     return todo.status
-
-@app.route("/", defaults={'path':''})
-def serve(path):
-    return send_from_directory(app.static_folder,'index.html')
+    
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def catch_all(path):
+  return render_template("index.html")
 
 
 @app.route('/home')
-@cross_origin()
 def home():
     return "home"
 
