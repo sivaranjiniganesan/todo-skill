@@ -28,11 +28,9 @@ def todo_serializer(todo):
 def todo_task(todo):
     return todo.status
     
-@app.route('/', defaults={'path': ''})
-@app.route('/<path:path>')
-def catch_all(path):
-  return render_template("index.html")
-
+@app.route("/", defaults={'path':''})
+def serve(path):
+    return send_from_directory(app.static_folder,'index.html')
 
 @app.route('/home')
 def home():
