@@ -37,8 +37,8 @@ function App() {
           component={Home}>
             
           </Route>
-          <Route path="/project_portfolio" component={ProjOverview}>
-         
+          <Route exact path="https://todo-skill.herokuapp.com/project_portfolio" component={ProjOverview}>
+         <ProjOverview></ProjOverview>
           </Route>
           <Route path="/create">
      <Create></Create>
