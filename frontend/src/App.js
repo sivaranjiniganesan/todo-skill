@@ -33,11 +33,12 @@ function App() {
        
      <Router>
         <Switch>
-          <Route component={Home}>
+          <Route path="/home"
+          component={Home}>
             
           </Route>
-          <Route path="/project_portfolio">
-          <ProjOverview></ProjOverview>
+          <Route path="/project_portfolio" component={ProjOverview}>
+         
           </Route>
           <Route path="/create">
      <Create></Create>
