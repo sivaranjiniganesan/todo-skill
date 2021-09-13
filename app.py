@@ -51,9 +51,7 @@ def handle_404(e):
     return send_from_directory(app.static_folder, "index.html")
 
 
-@app.route('/home')
-def home():
-    return "home"
+
 
 def getSkill(val):
     return jsonify([*map(todo_task, Todo.query.filter_by(id=val))])
