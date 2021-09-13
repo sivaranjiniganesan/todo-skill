@@ -27,15 +27,13 @@ function App() {
 
   return (
     <div className="App">
-       <Create></Create>
-       <Router>  <Switch><Nav></Nav></Switch></Router>
-       <Router>  <Switch> <Create></Create></Switch></Router>
        
+       <Router>  <Switch><Nav></Nav></Switch></Router>
      <Router>
         <Switch>
-          <Route path="/home"
+          <Route path="https://todo-skill.herokuapp.com/home"
           component={Home}>
-            
+            <Home></Home>
           </Route>
           <Route exact path="https://todo-skill.herokuapp.com/project_portfolio" component={ProjOverview}>
          <ProjOverview></ProjOverview>
