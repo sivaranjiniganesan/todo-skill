@@ -31,11 +31,10 @@ function App() {
        <Router>  <Switch><Nav></Nav></Switch></Router>
      <Router>
         <Switch>
-          <Route path="https://todo-skill.herokuapp.com/home"
-          component={Home}>
+          <Route path="/home">
             <Home></Home>
           </Route>
-          <Route exact path="https://todo-skill.herokuapp.com/project_portfolio" component={ProjOverview}>
+          <Route path="/project_portfolio">
          <ProjOverview></ProjOverview>
           </Route>
           <Route path="/create">
