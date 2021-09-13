@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, render_template,request, json
 from flask_sqlalchemy import SQLAlchemy
 from flask.helpers import send_from_directory
+import os
 
 
 app = Flask(__name__, static_url_path='', static_folder='frontend/build')
@@ -28,9 +29,15 @@ def todo_serializer(todo):
 def todo_task(todo):
     return todo.status
     
-@app.route("/", defaults={'path':''})
+
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
 def serve(path):
-    return send_from_directory(app.static_folder,'index.html')
+    if path != "" and os.path.exists(app.static_folder + '/' + path):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
+
 
 @app.route('/home')
 def home():
