@@ -23,7 +23,8 @@ def todo_serializer(todo):
         'cat': todo.cat,
         'start': todo.start,
         'end': todo.end,
-        'status':todo.status
+        'status':todo.status,
+        'complete':todo.complete
             }
 
 def todo_task(todo):
@@ -78,6 +79,7 @@ def create():
     added_todo.start = request_data['start']
     added_todo.end = request_data['end']
     added_todo.status = request_data['status']
+    added_todo.complete = request_data['complete']
     #getSkillValues = getSkill(request_data['skill'])
     db.session.add(added_todo)
     db.session.commit()
@@ -88,6 +90,7 @@ def changeStatus():
     request_data = json.loads(request.data)
     admin = Todo.query.get(request_data['id'])
     admin.status = request_data['status']
+    admin.complete = request_data['complete']
     db.session.commit()
     return {"100": "Status Updated"}
 
@@ -109,10 +112,11 @@ class Todo(db.Model):
     start = db.Column(db.Text, nullable=False)
     end = db.Column(db.Text, nullable=False)
     status = db.Column(db.Text, nullable=False)
+    complete = db.Column(db.Text, nullable=True)
 
 
     def __str__(self):
-        return f'{self.id} {self.spl} {self.skill} {self.task} {self.cat} {self.start} {self.end} {self.status}'
+        return f'{self.id} {self.spl} {self.skill} {self.task} {self.cat} {self.start} {self.end} {self.status} {self.complete}'
 
     # if getSkillValues == None:
     #     db.session.add(added_todo)

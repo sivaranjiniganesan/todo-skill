@@ -155,7 +155,8 @@ export const TableView = ({ todo, getLatestTodos })=> {
       method: 'POST',
       body: JSON.stringify({
        id:selected[id],
-       status: "Done"
+       status: "Done",
+       complete: new Date().toLocaleString()
     }),
     headers: {
         "Content-Type": "application/json; chartset=UTF-8"
