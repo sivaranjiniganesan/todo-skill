@@ -206,17 +206,18 @@ class Todo(db.Model):
 #         return f'{self.id} {self.skill} {self.task}'
 
 
-# db.create_all()
-# todo_skill = Todo()
-# todo_skill.spl = "Frontend Development"
-# todo_skill.skill = "ReactJS"
-# todo_skill.task = "redux"
-# todo_skill.cat = "Theory"
-# todo_skill.start = "27/8/2021"
-# todo_skill.end = "27/9/2021"
-# todo_skill.status = "Todo"
-# db.session.add(todo_skill)
-# db.session.commit()
+db.create_all()
+todo_skill = Todo()
+todo_skill.spl = "Frontend Development"
+todo_skill.skill = "ReactJS"
+todo_skill.task = "redux"
+todo_skill.cat = "Theory"
+todo_skill.start = "27/8/2021"
+todo_skill.end = "27/9/2021"
+todo_skill.status = "Todo"
+todo_skill.complete = " "
+db.session.add(todo_skill)
+db.session.commit()
 
 
 

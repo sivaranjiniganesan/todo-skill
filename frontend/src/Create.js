@@ -28,7 +28,8 @@ function Create() {
             'task' : inputtask,
             'cat': inputcat,
             'start' : inputstart,
-            'end' : inputend
+            'end' : inputend,
+            'complete': ' '
         })
           fetch('/create', {
               method: 'POST',
@@ -39,7 +40,8 @@ function Create() {
                   start : inputstart,
                  end : inputend,
                  spl:inputspl,
-                 status:inputstatus
+                 status:inputstatus,
+                 complete:''
               }),
               headers: {
                   "Content-Type": "application/json; chartset=UTF-8"
